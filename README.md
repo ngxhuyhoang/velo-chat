@@ -7,7 +7,7 @@ A full-stack chat application monorepo with a Flutter mobile client and a NestJS
 ```
 velo-chat/
 ├── backend/     # NestJS REST API (TypeScript)
-├── velo_chat/   # Flutter mobile app (Android & iOS)
+├── mobile/      # Flutter mobile app (Android & iOS)
 ├── docs/        # Project documentation
 └── README.md
 ```
@@ -48,7 +48,7 @@ The API starts on `http://localhost:3000` (override with the `PORT` environment 
 ### Flutter app
 
 ```bash
-cd velo_chat
+cd mobile
 flutter pub get
 flutter run
 ```
@@ -69,7 +69,7 @@ flutter run
 | `pnpm run test:e2e`   | Run end-to-end tests      |
 | `pnpm run test:cov`   | Run tests with coverage   |
 
-### Flutter app (`velo_chat/`)
+### Flutter app (`mobile/`)
 
 | Command           | Description           |
 | ----------------- | --------------------- |
@@ -80,7 +80,7 @@ flutter run
 ## App architecture
 
 ```
-velo_chat/lib/
+mobile/lib/
 ├── main.dart                    # Entry point, wraps the app in ProviderScope
 ├── app.dart                     # MaterialApp.router + theme
 ├── providers/

@@ -6,7 +6,7 @@ Velo Chat is a monorepo with two deployable components:
 
 | Component | Path | Role |
 | --- | --- | --- |
-| Mobile client | `velo_chat/` | Flutter app (Android & iOS) that renders the UI and owns the user session |
+| Mobile client | `mobile/` | Flutter app (Android & iOS) that renders the UI and owns the user session |
 | API | `backend/` | NestJS REST API (TypeScript, ESM) intended to own auth, users and chat data |
 
 Supporting directories:
@@ -22,7 +22,7 @@ Supporting directories:
 flowchart LR
     User([User]) --> App
 
-    subgraph Client["Flutter app — velo_chat"]
+    subgraph Client["Flutter app — mobile"]
         App[Screens] --> State[Riverpod providers]
         State --> Secure[Secure token storage<br/>Keychain / Keystore]
         State --> Dio[Dio HTTP client]
@@ -38,7 +38,7 @@ flowchart LR
 
 ## Technology stack
 
-### Mobile (`velo_chat/`)
+### Mobile (`mobile/`)
 
 | Concern | Choice | Version |
 | --- | --- | --- |
@@ -72,7 +72,7 @@ velo-chat/
 │   ├── vitest.config.ts      # Unit test configuration
 │   └── vitest.config.e2e.ts  # E2E test configuration
 ├── docs/                     # Technical documentation
-├── velo_chat/                # Flutter app
+├── mobile/                   # Flutter app
 │   ├── lib/                  # Dart source
 │   └── test/                 # Widget/unit tests
 └── README.md

@@ -1,11 +1,11 @@
 # Mobile app (Flutter)
 
-The client is a Flutter application in [`velo_chat/`](../velo_chat) targeting Android and iOS.
+The client is a Flutter application in [`mobile/`](../mobile) targeting Android and iOS.
 
 ## Project structure
 
 ```
-velo_chat/lib/
+mobile/lib/
 ├── main.dart                     # Entry point: runApp(ProviderScope(child: App()))
 ├── app.dart                      # MaterialApp.router + Material 3 theme
 ├── providers/
@@ -108,7 +108,7 @@ UI notes:
 
 ## Tests
 
-- Widget/unit tests live in `velo_chat/test/`.
+- Widget/unit tests live in `mobile/test/`.
 - The current `widget_test.dart` is the default Flutter counter template and **does not match the app**; it should be replaced with tests for the router and auth flows.
 
 ## Known gaps / TODOs

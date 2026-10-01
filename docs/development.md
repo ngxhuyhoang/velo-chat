@@ -14,7 +14,7 @@
 ### Flutter app
 
 ```bash
-cd velo_chat
+cd mobile
 flutter pub get
 flutter run          # pick a connected device/emulator
 ```
@@ -35,7 +35,7 @@ PORT=4000 pnpm run start:dev
 
 ### Connecting the app to the API
 
-`velo_chat/lib/services/connection_instance.dart` currently has an empty `baseUrl`:
+`mobile/lib/services/connection_instance.dart` currently has an empty `baseUrl`:
 
 | Target | URL to use |
 | --- | --- |
@@ -47,10 +47,10 @@ PORT=4000 pnpm run start:dev
 
 | Task | Command | Directory |
 | --- | --- | --- |
-| Run app | `flutter run` | `velo_chat/` |
-| Analyze | `flutter analyze` | `velo_chat/` |
-| Format (Dart) | `dart format .` | `velo_chat/` |
-| Widget tests | `flutter test` | `velo_chat/` |
+| Run app | `flutter run` | `mobile/` |
+| Analyze | `flutter analyze` | `mobile/` |
+| Format (Dart) | `dart format .` | `mobile/` |
+| Widget tests | `flutter test` | `mobile/` |
 | Backend dev server | `pnpm run start:dev` | `backend/` |
 | Backend lint | `pnpm run lint` | `backend/` |
 | Backend format | `pnpm run format` | `backend/` |
@@ -61,7 +61,7 @@ PORT=4000 pnpm run start:dev
 
 ### Dart / Flutter
 
-- Lints: `flutter_lints` (see `velo_chat/analysis_options.yaml`); VS Code formats on save (`.vscode/settings.json`).
+- Lints: `flutter_lints` (see `mobile/analysis_options.yaml`); VS Code formats on save (`.vscode/settings.json`).
 - File names: `snake_case.dart`.
 - Providers: `xxxProvider`; notifier classes: `XxxController`.
 - Screens are plain widgets; put state and side effects in providers.

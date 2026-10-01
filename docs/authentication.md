@@ -13,7 +13,7 @@ This document describes how Velo Chat models user sessions, the flows implemente
 
 ## Session model
 
-`AuthState` (`velo_chat/lib/providers/auth_provider.dart`) contains:
+`AuthState` (`mobile/lib/providers/auth_provider.dart`) contains:
 
 | Field | Type | Description |
 | --- | --- | --- |
@@ -107,7 +107,7 @@ sequenceDiagram
 
 ## Token storage
 
-`TokenStorage` (`velo_chat/lib/shared/common/token_storage.dart`) wraps `flutter_secure_storage`:
+`TokenStorage` (`mobile/lib/shared/common/token_storage.dart`) wraps `flutter_secure_storage`:
 
 | Method | Description |
 | --- | --- |
