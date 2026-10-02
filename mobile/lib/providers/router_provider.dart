@@ -32,7 +32,7 @@ final routerProvider = Provider<GoRouter>((ref) {
     routes: [
       GoRoute(path: '/splash', builder: (context, state) => const Splash()),
       GoRoute(path: '/login', builder: (context, state) => const Login()),
-      GoRoute(path: '/home', builder: (context, state) => const Home()),
+      GoRoute(path: '/home', builder: (context, state) => Home()),
     ],
   );
 });

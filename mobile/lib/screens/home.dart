@@ -1,19 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:velo_chat/providers/auth_provider.dart';
+import 'package:velo_chat/screens/conversation.dart';
+import 'package:velo_chat/screens/profile.dart';
 
-class Home extends ConsumerWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  State<StatefulWidget> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int _currentTabIndex = 0;
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Home")),
-      body: Center(
-        child: FilledButton(
-          onPressed: () => ref.read(authProvider.notifier).logout(),
-          child: Text("Home"),
-        ),
+      body: IndexedStack(
+        index: _currentTabIndex,
+        children: [Conversation(), Profile()],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentTabIndex,
+        onTap: (value) {
+          setState(() {
+            _currentTabIndex = value;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: "Conversations",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle),
+            label: "Conversations",
+          ),
+        ],
       ),
     );
   }
